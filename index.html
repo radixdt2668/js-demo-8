@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-demo-8</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+  <div class="container my-5">
+    <div class="text-center">
+        <span> Normal</span>
+            <label class="switch">
+                <input type="checkbox" name="graduate">
+                <span class="slider round"></span>
+            </label>
+        <span class="text-primary"> Colored</span>
+      </div>
+    
+  <div class="col-md-12 ug mt-5">
+    
+     <div class="card bg-light">
+      <div class="card-body text-center">
+        <p class="card-text">Some text inside the normal card</p>
+      </div>
+    </div>
+    
+    </div>
+      
+  <div class="col-md-12 mt-5 phd" style="display: none" >
+    
+      <div class="card bg-primary">
+      <div class="card-body text-center">
+        <p class="card-text">Some text inside the colored card</p>
+      </div>
+    </div>
+    
+    </div>
+  </div>     
+  <script>
+    $(document).ready(function(){
+        $('[name="graduate"]').change(function(){
+            if($('[name="graduate"]:checked').is(":checked")){
+                $('.ug').hide();
+                $('.phd').show();
+            }else{
+                $('.ug').show();
+                $('.phd').hide();
+            }
+        });
+    });
+  </script>  
+</body>
+</html>
